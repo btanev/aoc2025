@@ -1,12 +1,12 @@
 name: aoc2025
 description: Advent of Code 2025 solutions in Dart.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/btanev/aoc2025
+publish_to: none
 
 environment:
   sdk: ^3.10.1
 
-# Add regular dependencies here.
 dependencies:
   path: ^1.9.0
 

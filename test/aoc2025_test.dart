@@ -80,7 +80,33 @@ void main() {
 
   test('day5', () async {
     final AoCDay day = Day5();
-    day.load(testInput: []);
+    day.load(
+      testInput: [
+        '3-5',
+        '10-14',
+        '16-20',
+        '12-18',
+        '',
+        '1',
+        '5',
+        '8',
+        '11',
+        '17',
+        '32', //
+      ],
+    );
+
+    expect(await day.part1(), 3);
+    expect(await day.part2(), 14);
+  });
+
+  test('day6', () async {
+    final AoCDay day = Day5();
+    day.load(
+      testInput: [
+        //
+      ],
+    );
 
     expect(await day.part1(), 0xFF);
     expect(await day.part2(), 0xFF);
