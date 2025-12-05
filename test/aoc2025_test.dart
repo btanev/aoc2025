@@ -74,8 +74,8 @@ void main() {
       ],
     );
 
-    expect(await day.part1(), 13);
-    expect(await day.part2(), 43);
+    expect(day.part1(), 13);
+    expect(day.part2(), 43);
   });
 
   test('day5', () async {
@@ -96,8 +96,8 @@ void main() {
       ],
     );
 
-    expect(await day.part1(), 3);
-    expect(await day.part2(), 14);
+    expect(day.part1(), 3);
+    expect(day.part2(), 14);
   });
 
   test('day6', () async {
@@ -108,7 +108,7 @@ void main() {
       ],
     );
 
-    expect(await day.part1(), 0xFF);
-    expect(await day.part2(), 0xFF);
+    expect(day.part1(), 0xFF);
+    expect(day.part2(), 0xFF);
   });
 }

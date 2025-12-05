@@ -64,12 +64,23 @@ class Day1 extends AoCDay {
         _ => throw Exception('Invalid direction'),
       };
 
-      for (int i = 1; i <= distance; i++) {
-        currPosition = (currPosition + (op * 1)) % 100;
-        if (currPosition == 0) {
-          zeroCount++;
+      final int startPosition = currPosition;
+
+      if (op == 1) {
+        zeroCount += (startPosition + distance) ~/ 100;
+      } else {
+        // rotating left
+        if (distance >= startPosition) {
+          // and we pass the 0
+          if (startPosition != 0) {
+            zeroCount += 1; // account for the 0
+          }
+          final int distanceAfterZero = distance - startPosition;
+          zeroCount += distanceAfterZero ~/ 100; // account for any additional 0s after additional full rotations
         }
       }
+
+      currPosition = (startPosition + (op * distance)) % 100;
     }
 
     return zeroCount; // 6223

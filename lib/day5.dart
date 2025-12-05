@@ -26,11 +26,8 @@ class Day5 extends AoCDay {
     int freshCount = 0;
     for (final String idStr in availableIngredientsIds) {
       final int ingredientId = int.parse(idStr);
-      for (final Range range in mergedFreshRanges) {
-        if (range.contains(ingredientId)) {
-          freshCount++;
-          break;
-        }
+      if (_isFresh(mergedFreshRanges, ingredientId)) {
+        freshCount++;
       }
     }
 
@@ -77,6 +74,25 @@ class Day5 extends AoCDay {
     }
 
     return mergedFreshRanges;
+  }
+
+  bool _isFresh(List<Range> mergedRanges, int ingredientId) {
+    int low = 0;
+    int high = mergedRanges.length - 1;
+
+    while (low <= high) {
+      final int mid = (low + high) ~/ 2;
+      final Range range = mergedRanges[mid];
+
+      if (range.contains(ingredientId)) {
+        return true;
+      } else if (ingredientId < range.start) {
+        high = mid - 1;
+      } else {
+        low = mid + 1;
+      }
+    }
+    return false;
   }
 }
 

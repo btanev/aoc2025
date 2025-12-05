@@ -69,6 +69,10 @@ class Day3 extends AoCDay {
       if (currentValue > maxValue) {
         maxValue = currentValue;
         maxValueIndex = i;
+        if (maxValue == 9) {
+          // can't beat 9
+          break;
+        }
       }
     }
     return (index: maxValueIndex, value: maxValue);
