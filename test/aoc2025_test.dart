@@ -4,6 +4,8 @@ import 'package:aoc2025/day2.dart';
 import 'package:aoc2025/day3.dart';
 import 'package:aoc2025/day4.dart';
 import 'package:aoc2025/day5.dart';
+import 'package:aoc2025/day6.dart';
+import 'package:aoc2025/day7.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -101,7 +103,22 @@ void main() {
   });
 
   test('day6', () async {
-    final AoCDay day = Day5();
+    final AoCDay day = Day6();
+    day.load(
+      testInput: [
+        '123 328  51 64',
+        ' 45 64  387 23',
+        '  6 98  215 314',
+        '*   +   *   +', //
+      ],
+    );
+
+    expect(day.part1(), 4277556);
+    expect(day.part2(), 3263827);
+  });
+
+  test('day7', () async {
+    final AoCDay day = Day7();
     day.load(
       testInput: [
         //
