@@ -7,7 +7,7 @@ class Day4 extends AoCDay {
 
   // https://adventofcode.com/2025/day/4
   //
-  // The forklifts can only access a roll of paper if there are fewer than four rolls of paper in the eight adjacent
+  // The forklifts can only access a roll of paper if there are _fewer than four rolls_ of paper in the eight adjacent
   // positions. If you can figure out which rolls of paper the forklifts can access, they'll spend less time looking and
   // more time breaking down the wall to the cafeteria.
   //
@@ -19,7 +19,7 @@ class Day4 extends AoCDay {
         .toList(growable: false);
 
     final List<Location> accessibleLocations = _findAccessibleRolls(grid);
-    return accessibleLocations.length; // 1502
+    return accessibleLocations.length;
   }
 
   // https://adventofcode.com/2025/day/4#part2
@@ -44,7 +44,7 @@ class Day4 extends AoCDay {
       _liftRollsAt(grid, accessibleLocations);
     }
 
-    return totalRemoved; // 9083
+    return totalRemoved;
   }
 
   List<Location> _findAccessibleRolls(List<List<String>> grid) {

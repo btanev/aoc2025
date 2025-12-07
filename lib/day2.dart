@@ -43,7 +43,7 @@ class Day2 extends AoCDay {
     }
 
     // print('Invalid IDs: ${invalidIds.length}');
-    return invalidIds.reduce((int a, int b) => a + b); // 23701357374
+    return invalidIds.reduce((int a, int b) => a + b);
   }
 
   // https://adventofcode.com/2025/day/2#part2
@@ -89,7 +89,7 @@ class Day2 extends AoCDay {
     }
 
     // print('Invalid IDs: ${invalidIds.length}');
-    return invalidIds.reduce((int a, int b) => a + b); // 34284458938
+    return invalidIds.reduce((int a, int b) => a + b);
   }
 }
 

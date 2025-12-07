@@ -19,7 +19,7 @@ class Day3 extends AoCDay {
     final List<String> banks = inputLines;
 
     final int totalJoltage = _findTotalJoltage(banks, batteriesCount);
-    return totalJoltage; // 16993
+    return totalJoltage;
   }
 
   // https://adventofcode.com/2025/day/3#part2
@@ -34,7 +34,7 @@ class Day3 extends AoCDay {
     final List<String> banks = inputLines;
 
     final int totalJoltage = _findTotalJoltage(banks, batteriesCount);
-    return totalJoltage; // 168617068915447
+    return totalJoltage;
   }
 
   int _findTotalJoltage(List<String> banks, int batteriesCount) {

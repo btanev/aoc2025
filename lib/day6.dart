@@ -43,7 +43,7 @@ class Day6 extends AoCDay {
       grandTotal += problemTotal;
     }
 
-    return grandTotal; // 7326876294741
+    return grandTotal;
   }
 
   // https://adventofcode.com/2025/day/5#part2
@@ -118,6 +118,6 @@ class Day6 extends AoCDay {
       grandTotal += problemTotal;
     }
 
-    return grandTotal; // 10756006415204
+    return grandTotal;
   }
 }

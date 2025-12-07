@@ -41,7 +41,7 @@ class Day1 extends AoCDay {
       }
     }
 
-    return zeroCount; // 1066
+    return zeroCount;
   }
 
   // https://adventofcode.com/2025/day/1#part2
@@ -83,6 +83,6 @@ class Day1 extends AoCDay {
       currPosition = (startPosition + (op * distance)) % 100;
     }
 
-    return zeroCount; // 6223
+    return zeroCount;
   }
 }

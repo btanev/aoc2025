@@ -37,7 +37,7 @@ class Day7 extends AoCDay {
 
       beamQueue.addAll(currentBeam.nextBeams);
     }
-    return splitCount; // 1516
+    return splitCount;
   }
 
   // https://adventofcode.com/2025/day/7#part2
@@ -73,7 +73,7 @@ class Day7 extends AoCDay {
     }
 
     // DFS with memoization -> make it iterative?
-    return countTimelines(manifold.entranceBeam); // 1393669447690
+    return countTimelines(manifold.entranceBeam);
   }
 }
 
@@ -86,13 +86,11 @@ class TachyonManifold {
   factory TachyonManifold.fromLayout(List<String> layout) {
     late Position entrancePosition;
 
-    rowsLoop:
     for (int row = 0; row < layout.length; row++) {
-      for (int col = 0; col < layout[row].length; col++) {
-        if (layout[row][col] == 'S') {
-          entrancePosition = (row: row, col: col);
-          break rowsLoop;
-        }
+      final int col = layout[row].indexOf('S');
+      if (col >= 0) {
+        entrancePosition = (row: row, col: col);
+        break;
       }
     }
 

@@ -31,7 +31,7 @@ class Day5 extends AoCDay {
       }
     }
 
-    return freshCount; // 505
+    return freshCount;
   }
 
   // https://adventofcode.com/2025/day/5#part2
@@ -46,7 +46,7 @@ class Day5 extends AoCDay {
 
     final List<Range> mergedFreshRanges = _processFreshIngredientRanges(freshIngredientsIdRanges);
     final int totalFreshIngredients = mergedFreshRanges.fold(0, (int sum, Range range) => sum + range.length);
-    return totalFreshIngredients; // 344423158480189
+    return totalFreshIngredients;
   }
 
   List<Range> _processFreshIngredientRanges(List<String> freshIngredientsIdRanges) {
