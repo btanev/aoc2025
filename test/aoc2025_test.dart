@@ -6,6 +6,7 @@ import 'package:aoc2025/day4.dart';
 import 'package:aoc2025/day5.dart';
 import 'package:aoc2025/day6.dart';
 import 'package:aoc2025/day7.dart';
+import 'package:aoc2025/day8.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -119,6 +120,33 @@ void main() {
 
   test('day7', () async {
     final AoCDay day = Day7();
+    day.load(
+      testInput: [
+        '.......S.......',
+        '...............',
+        '.......^.......',
+        '...............',
+        '......^.^......',
+        '...............',
+        '.....^.^.^.....',
+        '...............',
+        '....^.^...^....',
+        '...............',
+        '...^.^...^.^...',
+        '...............',
+        '..^...^.....^..',
+        '...............',
+        '.^.^.^.^.^...^.',
+        '...............', //
+      ],
+    );
+
+    expect(day.part1(), 21);
+    expect(day.part2(), 40);
+  });
+
+  test('day8', () async {
+    final AoCDay day = Day8();
     day.load(
       testInput: [
         //
